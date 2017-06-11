@@ -2,9 +2,9 @@
 
 [![Build Status](https://travis-ci.org/RutledgePaulV/hierarchical.svg?branch=develop)](https://travis-ci.org/RutledgePaulV/hierarchical)
 
-A Clojure library offering views over Clojure's associative data structures
-that use Clojure hierarchies when testing for membership.
-
+Hierarchical is a library providing views over associative data structures that utilize
+Clojure's hierarchy semantics for membership tests rather than strict values checking.
+  
 ## Usage
 
 ```clojure
