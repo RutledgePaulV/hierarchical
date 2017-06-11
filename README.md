@@ -10,6 +10,8 @@ that use Clojure hierarchies when testing for membership.
   (:require [hierarchical.core :as h]))
 
 (derive ::pets ::animals)
+(derive ::farm ::animals)
+(derive ::cows ::farm)
 (derive ::cats ::pets)
 (derive ::dogs ::pets)
 
