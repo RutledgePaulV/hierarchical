@@ -2,8 +2,7 @@
   (:import (clojure.lang
              PersistentHashMap IPersistentMap
              Associative IFn IKVReduce ILookup IMapIterable
-             IPersistentCollection Seqable APersistentMap)
-           (hierarchical.core HierarchicalMap)))
+             IPersistentCollection Seqable APersistentMap)))
 
 (defn pparent [h tag]
   (first (parents h tag)))
@@ -12,10 +11,8 @@
   (or (.entryAt m k)
       (loop [k (pparent h k)]
         (when k
-          (let [entry (.entryAt m k)]
-            (if entry
-              entry
-              (recur (pparent h k))))))))
+          (if-let [entry (.entryAt m k)]
+            entry (recur (pparent h k)))))))
 
 (deftype HierarchicalMap [h ^APersistentMap delegate]
 
