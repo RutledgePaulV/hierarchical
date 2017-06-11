@@ -2,7 +2,7 @@
 
   :description
   "Hierarchical is a library providing views over associative data structures that utilize
-  Clojure's hierarchy semantics for membership tests rather than strict values checking."
+  Clojure's hierarchy semantics for membership tests rather than strict equality."
 
   :url "https://github.com/rutledgepaulv/hierarchical"
 
